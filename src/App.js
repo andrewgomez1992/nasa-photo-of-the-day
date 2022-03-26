@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react"; // added useState and useEff
 import axios from 'axios'; // imported axios, checked package.json and axios was already installed
 import "./App.css";
 import styled, { keyframes } from "styled-components"; // imported styled components
-
-
 import theme from "./theme/theme";
 import NasaPhoto from './Components/NasaPhoto';
-
-
 
 const kf = keyframes`
   100% {
@@ -77,8 +73,7 @@ const StyledDetails = styled.div`
 
 
   
-`
-
+`;
 
 function App() {
   const [data, setData] = useState(); // added state for data
@@ -97,7 +92,7 @@ function App() {
   return (
     <StyledDetails className="App">
       <h1>NASA'S PHOTO OF THE DAY !</h1> {/** i know this is hardcoded :/ */}
-      <h4>created by Andrew Gomez</h4>
+      <h4>created by Andrew Gomez</h4> {/** RESEARCHING THIS SHIT TONIGHT */}
       <p>
         { data && <NasaPhoto photo={data} /> }
         
